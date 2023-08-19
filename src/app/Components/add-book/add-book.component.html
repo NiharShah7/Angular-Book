@@ -1,0 +1,24 @@
+
+<h3  class="text-center mx-3 my-3"  style="color: rgb(236, 4, 4);">Add Book Details Form</h3>
+<form class="container" (ngSubmit)="addbooks()">
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Bookid</label>
+    <input type="text" class="form-control" id="bookid" name="bookid" [(ngModel)]="book.bookid" > 
+  </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label"> Book Author</label>
+      <input type="text" class="form-control" id="bookauthor" name="bookauthor" [(ngModel)]="book.bookauthor" aria-describedby="emailHelp">
+     
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Book Name</label>
+      <input type="text" class="form-control" id="bookname" name="bookname" [(ngModel)]="book.bookname" > 
+    </div>
+  
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Book Price</label>
+        <input type="number" class="form-control" id="bookprice" name="bookprice" [(ngModel)]="book.bookprice">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

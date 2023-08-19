@@ -1,0 +1,34 @@
+
+<form (ngSubmit)="searchbook()">
+    <div class="mb-3" >
+        <label for="exampleInputPassword1" class="form-label mx-3" style="font-size:30px; color: rgb(33, 143, 206);">Book-id</label>
+        <input type="number" placeholder="enter book-id" class="form-control mx-sm-3" id="bookidsearch" name="bookidsearch" [(ngModel)]="book.bookid" style="width: 250px;" >  
+      </div>
+      <button type="submit" class="btn btn-success mx-3">Search BOOK</button>
+</form>
+
+
+
+<table class="table">
+    <thead>
+        <tr class="table-primary">
+       
+            <th scope="col" class="text-center">Book-Author</th>
+            <th scope="col" class="text-center">Book-Name</th>
+            <th scope="col" class="text-center">Book-Price</th>
+           
+        </tr>
+    </thead>
+    
+
+    <tbody>
+      <tr>
+          
+            <td  class="text-center">{{book.bookauthor}}</td>
+            <td class="text-center">{{book.bookname}}</td>
+            <td  class="text-center">{{book.bookprice}}</td>
+            
+        </tr>
+
+    </tbody> 
+</table>

@@ -1,0 +1,37 @@
+
+<marquee direction="right" scrollamount="12"><h2 class="my-3 mx-3">List of All Books in Store</h2></marquee>
+<table class="table">
+    <thead>
+        <tr class="table-primary">
+            <th scope="col" class="text-center">Book-Id</th>
+            <th scope="col" class="text-center">Book-Author</th>
+            <th scope="col" class="text-center">Book-Name</th>
+            <th scope="col" class="text-center">Book-Price</th>
+            <th scope="col" class="text-center">Update Book</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books" class="table-info">
+            <td class="text-center">{{book.bookid}}</td>
+            <td  class="text-center">{{book.bookauthor}}</td>
+            <td class="text-center">{{book.bookname}}</td>
+            <td  class="text-center">{{book.bookprice}}</td>
+            <td class="text-center">
+                <button (click)="UpdateBooks(book.bookid)" class="btn btn-primary">Edit</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<hr style="border: 10px solid rgb(77, 5, 92);" >
+<form (ngSubmit)="deletebook()">
+    <div class="mb-3" >
+        <label for="exampleInputPassword1" class="form-label mx-3" style="font-size:30px; color: rgb(33, 143, 206);">Book-id</label>
+        <input type="text" placeholder="enter book-id" class="form-control mx-sm-3" id="bookid" name="bookid" [(ngModel)]="book.bookid" style="width: 250px;" >  
+      </div>
+      <button type="submit" class="btn btn-danger mx-3">DELETE BOOK</button>
+</form>
+
+<hr style="border: 10px solid rgb(77, 5, 92);" >
+
+
